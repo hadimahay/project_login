@@ -5,25 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>profile</title>
 </head>
-<body style="background: #000;">
+<body class="d-flex h-100 text-center text-white bg-dark">      
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="mb-auto">
+        <div>
+          <h3 class="float-md-start mb-0">Comment board</h3>
+          <nav class="nav nav-masthead justify-content-center float-md-end">
+            <a class="nav-link" href="{% url 'comment:comment' %}">Comment</a>
+            <a class="nav-link" href="{% url 'comment:board' %}">Board</a>
+          </nav>
+        </div>
+      </header>
 
-    <br>
-    <div class="col-12">  
-        <div class="col-6" style="padding-left: 40%;">      
-            <div class="portlet light profile-sidebar-portlet bordered">
-                <div class="profile-userpic">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="img-responsive" alt="" style="border-radius: 150px;"> </div>
-                <div class="profile-usertitle">
-                    <div class="profile-usertitle-name" style="margin-left: 14%;color:#888 ;"><h1>{{user.username}}</h1></div>
-                    <div class="profile-usertitle-job" style="margin-left: 10%;color:#888 ;"> email : {{user.email}} </div>
+      <main >
+        <div>
+            <br>
+            <div class="col-12">  
+                <div class="col-6" style="padding-left: 40%;">      
+                    <div class="portlet light profile-sidebar-portlet bordered">
+                        <div class="profile-userpic">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="img-responsive" alt="" style="border-radius: 150px;"> </div>
+                        <div class="profile-usertitle">
+                            <div class="profile-usertitle-name" style="margin-left: 14%;color:#888 ;"><h1>{{user.username}}</h1></div>
+                            <div class="profile-usertitle-job" style="margin-left: 10%;color:#888 ;"> email : {{user.email}} </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-            </div>
-        </div>
+        
+      </main>
+
+      <footer class="mt-auto text-white-50">
+       <a href="https://twitter.com/mdo" class="text-white">@hadi40649495</a>.</p>
+      </footer>
+      
+
     </div>
-</div> 
+
+    
 </body>
 </html>

@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sin.apps.SinConfig',
+    'comment.apps.CommentConfig',
 ]
 
 MIDDLEWARE = [

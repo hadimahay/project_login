@@ -20,6 +20,7 @@ from sin.views import home
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/',include('sin.urls',namespace='Sin')),
-    path('', home , name='home')
+    path('', home , name='home'),
+    path('comment/',include('comment.urls',namespace='comment'))
 
 ]
